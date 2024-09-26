@@ -140,21 +140,3 @@ O projeto é composto por dois componentes principais:
 3. **Acessar a Interface Web**
    - Navegar até `http://localhost:5000/show-image` para visualizar a imagem processada.
 
-## Possíveis Melhorias
-
-- **Otimização de Performance**
-  - Ajustar a resolução e qualidade das imagens para equilibrar entre qualidade e velocidade.
-  - Melhorar a eficiência do código de detecção de faces.
-
-- **Segurança**
-  - Implementar autenticação nos endpoints para evitar acesso não autorizado.
-  - Utilizar HTTPS para comunicação segura.
-
-- **Robustez**
-  - Adicionar tratamento de erros mais robusto para lidar com falhas na comunicação.
-  - Implementar reconexão automática em caso de perda de conexão.
-
-## Conclusão
-
-O projeto implementa com sucesso um sistema de detecção de faces utilizando um ESP32-CAM e um computador host, atendendo aos requisitos de divisão de tarefas em threads. A arquitetura do sistema permite a captura, envio e processamento de imagens de forma eficiente, utilizando semáforos para sincronização e threads dedicadas para cada funcionalidade principal.
-
