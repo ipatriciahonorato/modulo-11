@@ -14,8 +14,8 @@
 #include <HTTPClient.h>
 
 // Credenciais da rede Wi-Fi
-const char* ssid = ".Thomas";
-const char* password = "pp280597";
+const char* ssid = "rede";
+const char* password = "senha";
 
 // Cria o objeto AsyncWebServer na porta 80
 AsyncWebServer server(80);
