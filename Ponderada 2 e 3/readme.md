@@ -168,10 +168,9 @@ ESP32_IP=192.168.23.3
    - Ajustar os endereços IP conforme necessário.
 
 2. **Executar o Código Python**
-   - Instalar as dependências necessárias (`opencv-python`, `flask`, etc.).
    - Executar o script Python no computador host.
    - Certificar-se de que o computador está na mesma rede que o ESP32-CAM.
 
 3. **Acessar a Interface Web**
-   - Navegar até `http://localhost:5000/show-image` para visualizar a imagem processada.
+   - Navegar até `http://localhost:5000/` para visualizar a imagem processada.
 
