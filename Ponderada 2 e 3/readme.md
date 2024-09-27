@@ -125,6 +125,41 @@ O projeto é composto por dois componentes principais:
   - O servidor Flask disponibiliza uma página web para visualizar a imagem processada.
   - A página é atualizada automaticamente para mostrar as novas detecções.
 
+## Configuração do Ambiente (.env) no Windows
+
+Execute o comando para criar um ambiente virtual:
+
+1. **Criação do Ambiente Virtual**
+
+```
+python -m venv venv
+```
+
+2. **Ativação do Ambiente Virtual**
+
+No terminal, execute o comando para ativar o ambiente virtual:
+```
+venv\Scripts\activate
+```
+
+3. **Instalação das Dependências**
+
+Com o ambiente virtual ativado, execute o comando para instalar as dependências do projeto:
+
+```
+pip install -r requirements.txt
+```
+
+4. **Criação do Arquivo .env (Opcional)**
+
+Crie um arquivo .env na raiz do projeto e adicione variáveis de ambiente personalizadas, se necessário.
+Exemplo de um arquivo .env:
+
+```
+FLASK_ENV=development
+ESP32_IP=192.168.23.3
+```
+
 ## Como Executar o Projeto
 
 1. **Configurar o ESP32-CAM**
