@@ -9,8 +9,8 @@ import json
 from flask import Flask, render_template_string, request, jsonify
 
 # Define o IP do seu ESP32-CAM
-esp32_cam_url = "http://192.168.23.3/saved-photo"
-esp32_capture_url = "http://192.168.23.3/capture"
+esp32_cam_url = "http://10.128.0.36/saved-photo"
+esp32_capture_url = "http://10.128.0.36/capture"
 
 # Carrega o classificador de face pré-treinado (Haar Cascade)
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
@@ -126,7 +126,7 @@ def image_processing_thread():
                                 json_data = json.dumps(face_data)
 
                                 # Substitua pelo endereço IP do seu ESP32
-                                esp32_url = 'http://192.168.23.3/face-detection'
+                                esp32_url = 'http://10.128.0.36/face-detection'
 
                                 response = requests.post(esp32_url, data=json_data, headers=headers)
 
@@ -144,10 +144,7 @@ def image_processing_thread():
 
                     # Salva a imagem processada
                     cv2.imwrite('static/processed_image.jpg', image_buffer)
-
-                    # Opcional: Exibe a imagem com as detecções
-                    # cv2.imshow("Imagem Processada", image_buffer)
-                    # cv2.waitKey(1)
+                    
         else:
             # Timeout ocorreu, verifica se o evento de encerramento foi definido
             continue

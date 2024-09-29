@@ -14,8 +14,8 @@
 #include <HTTPClient.h>
 
 // Credenciais da rede Wi-Fi
-const char* ssid = "rede";
-const char* password = "senha";
+const char* ssid = "Inteli.Iot";
+const char* password = "@Intelix10T#";
 
 // Cria o objeto AsyncWebServer na porta 80
 AsyncWebServer server(80);
@@ -162,7 +162,7 @@ void sendPhotoTask(void * parameter) {
             file.read(buffer, fileSize);
             if (WiFi.status() == WL_CONNECTED) {
               HTTPClient http;
-              http.begin("http://192.168.23.47:5000/receive-image");
+              http.begin("http://10.128.0.8:5000/receive-image"); //Ip computador, IPV4
               http.addHeader("Content-Type", "image/jpeg");
 
               int httpResponseCode = http.POST(buffer, fileSize);
